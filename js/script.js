@@ -30,7 +30,7 @@ const arrayNum = [1,2,3];
 
 // #7-12
 
-const arr = [1,2,3,4,5];
+// const arr = [1,2,3,4,5];
 
 // console.log(arr.slice(0,3));
 
@@ -48,6 +48,77 @@ const arr = [1,2,3,4,5];
 // console.log(arr);
 
 // #13
+
+// function compareNumeric(a,b){
+//     if (a > b) return 1;
+//     if (a === b) return 0;
+//     if (a < b) return -1;
+// }
+
+// const arr = [3,4,1,2,7];
+
+// console.log(arr.sort(compareNumeric));
+// console.log(arr);
+
+// #14 & #15
+// const arr = [5,6,7,8,9];
+
+// const result = arr.reduce((sum,current) => sum + current,0);
+// alert(result);
+
+// const result = arr.forEach(function(item,index,array){
+//     array[index] = item ** 2;
+// })
+
+// const result = arr.forEach((item,index,array) => array[index] = item ** 2);
+// console.log(arr);
+
+// #16 & #17
+// const arr = [1,-3,5,6,-7,8,9,-11];
+
+// const result = arr.filter(item => item < 0);
+// const result = arr.filter(item => item > 0);
+// console.log(result);
+
+// #18
+// const arr = ['aaa', 'aaaqqq', 'zzzqq', 'zz', 'qsaa', 'q', 'az'];
+// const result = arr.filter(item => item.length > 5);
+// console.log(result);
+
+// #19
+// const arr = [1, 2, [3, 4], 5, [6, 7]];
+
+// const result = arr.filter(item => item = Array.isArray(item));
+// console.log(result);
+
+//  #20
+
+const arr = [5,-3, 6,-5, 0,-7, 8, 9];
+
+// const result = arr.reduce(function (accum,item){
+//     if(item < 0) return accum + item;
+// });
+const result = arr.reduce(function(accum,num){
+    if (num > 0) num === 0;
+    if (num < 0) num === 1;
+})
+
+
+console.log(result);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
