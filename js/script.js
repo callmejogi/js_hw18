@@ -1,4 +1,4 @@
-const arrayNum = [1,2,3];
+// const arrayNum = [1,2,3];
 //  #1
 
 // const arrNum = [4,5,6];
@@ -41,10 +41,18 @@ const arrayNum = [1,2,3];
 
 // console.log(arr.slice(1,4));
 
-// arr.splice(0,3,1,2,3,'a','b','c');
+
+// arr.splice(3,0,'a','b','c');
 // console.log(arr);
 
-// arr.splice(0,5,1,'a','b',2,3,4,'c',5,'e');
+// 12 version 1
+// arr.splice(1,0,'a','b');
+// arr.splice(6,0,'c');
+// arr.splice(8,0,'e');
+// console.log(arr);
+
+// 12 version 2
+// arr.splice(0,5,1,'a','b',2,3,4,'c',5,'e')
 // console.log(arr);
 
 // #13
@@ -77,7 +85,7 @@ const arrayNum = [1,2,3];
 // const arr = [1,-3,5,6,-7,8,9,-11];
 
 // const result = arr.filter(item => item < 0);
-// const result = arr.filter(item => item > 0);
+// const result = arr.filter(item => item % 2 === 0);
 // console.log(result);
 
 // #18
@@ -95,14 +103,18 @@ const arrayNum = [1,2,3];
 
 const arr = [5,-3, 6,-5, 0,-7, 8, 9];
 
-// const result = arr.reduce(function (accum,item){
-//     if(item < 0) return accum + item;
-// });
-const result = arr.reduce(function(accum,num){
-    if (num > 0) num === 0;
-    if (num < 0) num === 1;
-})
+// const result = arr.filter(item => item < 0);
+// console.log(result.length);
 
+const result = arr.reduce(function(accum,item,index,array){
+    if (array[index] < 0) {
+        item = 1;
+    }
+    if (array[index] > 0) {
+        item = 0;
+    }
+    return accum + item;
+},0);
 
 console.log(result);
 
